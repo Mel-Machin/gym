@@ -52,13 +52,13 @@ const FormCrear = ({ modelData, createFunction, autoIncrement, pikers,filesInput
                             setModel({ ...model, [piker.clave]: itemValue });
                         }
 
-                    }}
-                >
+                    }}>
 
                     {piker.elements.map((elemento, index) =>
                     (
                         <Picker.Item key={index} label={Object.values(elemento)[0]} value={Object.values(elemento)[0]} />
-                    ))}
+                    )
+                    )}
 
                 </Picker>
             </View>
@@ -73,7 +73,7 @@ const FormCrear = ({ modelData, createFunction, autoIncrement, pikers,filesInput
         }else{ // sino devuelve una entrada texto normal 
             return (
                 <View key={clave}> 
-                    <Text style={{fontSize:17}}>{clave}</Text> {/* label con el nombre de la propiedad */}
+                    <Text style={{fontSize:17}}>{clave}</Text>
                     <TextInput style={{borderBottomColor:'rgb(184,184,184)', borderBottomWidth: 2,backgroundColor:'white'}} value={model[clave]} onChangeText={(value) => {
                         if (typeof modelTipes[clave] === 'number') { // veriffica si el tipo de valor de la propiedad es number o text
                             setModel({ ...model, [clave]: parseInt(value) }); // si es number cambiar el valor de la propiedad a lo que tiene el input text
@@ -81,7 +81,7 @@ const FormCrear = ({ modelData, createFunction, autoIncrement, pikers,filesInput
                             setModel({ ...model, [clave]: value });
                         }
                     }} />
-                    {model[clave] == '' ? <Text>Campo requerido</Text> : null}{/*  mensaje que aparece si el campo esta vacio  */}
+                    {model[clave] == '' ? <Text>Campo requerido</Text> : null}
             </View>
             )
         }
