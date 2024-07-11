@@ -92,6 +92,7 @@ const Crear = () => {
                 createFunction={crear}
                 autoIncrement={true}
                 pikers={[{clave:"idEjercicio",elements:ejercicios},{clave:"ciUsuario",elements:usuarios},{clave:"dia",elements:diasSemana}]}
+                filesInput={[]}
             >
             </FormCrear>
             ):<Text>Se requiere tener ejercicios y usuarios registrados.</Text>}

@@ -114,6 +114,8 @@ const Editar = () => {
           modelData={rutina}
           editFunction={editarRutina}
           pikers={[{ clave: "idEjercicio", elements: ejercicios }, { clave: "ciUsuario", elements: usuarios }, { clave: "dia", elements: diasSemana }]}
+          filesInput={[]}
+
         >
         </FormEdit>) : null}
     </>

@@ -91,7 +91,8 @@ const Editar = () => {
         <FormEdit
           modelData={maquina}
           editFunction={editarmaquina}
-          pikers={[{ clave: "idTipoMaquina", elements: tiposMaquinas }]} >
+          pikers={[{ clave: "idTipoMaquina", elements: tiposMaquinas }]} 
+          filesInput={[]}>
         </FormEdit>) : null}
     </>
   );

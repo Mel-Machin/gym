@@ -94,6 +94,7 @@ const Editar = () => {
         modelData={ejercicio}
         editFunction={editarEjercicio}
         pikers={[{clave:"idTipoMaquina",elements:tiposMaquinas}]}
+        filesInput={[]}
         >
         </FormEdit>) : null}
       </>

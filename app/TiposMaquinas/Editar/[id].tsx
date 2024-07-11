@@ -77,7 +77,11 @@ const Editar = () => {
         <FormEdit
           modelData={tipoMaquina}
           editFunction={editartipoMaquina}
-          pikers={[]}>
+          pikers={[]}
+          filesInput={[{clave:'srcFoto'}]}
+          
+>
+            
         </FormEdit>) : null}
     </>
   );

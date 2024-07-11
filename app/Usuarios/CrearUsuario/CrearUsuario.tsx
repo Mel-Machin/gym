@@ -42,7 +42,9 @@ const CrearUsuario = () => {
                 modelData={new Usuario(0,'','','')}
                 createFunction={crearUsuario}
                 autoIncrement={false}
-                pikers={[]}>
+                pikers={[]}
+                filesInput={[]}
+                >
             </FormCrear>
         </View>
     );

@@ -4,7 +4,7 @@ import { View, Text, TextInput, Button, SafeAreaView, FlatList, StyleSheet, Scro
 import { Link } from 'expo-router';
 import { Col, Grid, Row } from 'react-native-easy-grid';
 
-const TablaGestion = ({ models, linkEdit, deleteFunction, refrescarModelsFunction, tbody }) => {
+const TablaGestion = ({ models, linkEdit, deleteFunction, refrescarModelsFunction, tbody,filesInput }) => {
 
     const activarEliminar = (model) => {
         Alert.alert(
@@ -45,6 +45,16 @@ const TablaGestion = ({ models, linkEdit, deleteFunction, refrescarModelsFunctio
         return header;
     }
 
+    const getEntrada=  (clave,valor) =>{
+        if(filesInput.find(piker => piker.clave == clave) != undefined){
+            return  valor!=null  && <Image source={{uri:valor} } style={{ width: 30, height: 30}} />
+        }else{
+            return (
+                <Text>{valor + ""}</Text>
+            )
+        }
+    }
+
     const getComponentes = () => {
 
         let componentes;
@@ -56,7 +66,7 @@ const TablaGestion = ({ models, linkEdit, deleteFunction, refrescarModelsFunctio
 
                 {Object.entries(model).map(([clave, valor], index) =>
                     <Col key={index} style={{borderColor:'rgb(180,180,180)', borderWidth:1,justifyContent:'center', alignItems:'center'}}>
-                        <Text>{valor + ""}</Text>
+                        {getEntrada(clave,valor)}
                     </Col>
                 )}
                 <Col key={index} style={{borderColor:'rgb(180,180,180)', borderWidth:1,justifyContent:'center', alignItems:'center'}}>

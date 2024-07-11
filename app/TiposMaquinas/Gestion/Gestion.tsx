@@ -57,6 +57,7 @@ const Gestion = () => {
           deleteFunction={eliminar}
           refrescarModelsFunction={obtenerTodos}
           tbody={["id", "tipo", "src"]}
+          filesInput={[{clave:'srcFoto'}]}
         >
         </TablaGestion>
       ) :  <Text>Aún no se tiene datos.</Text>}

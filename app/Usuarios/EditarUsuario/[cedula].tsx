@@ -75,7 +75,9 @@ const EditarUsuario = () => {
         <FormEdit
           modelData={usuario}
           editFunction={editarUsuario}
-          pikers={[]} >
+          pikers={[]}
+          filesInput={[]} >
+
         </FormEdit>) : null}
     </>
   );

@@ -74,6 +74,7 @@ const Crear = () => {
                 createFunction={crear}
                 autoIncrement={true}
                 pikers={[{clave:"idTipoMaquina",elements:tiposMaquinas}]}
+                filesInput={[]}
             >
             </FormCrear>
             ): <Text>Se requiere tener Tipos de maquinas registradas.</Text>}

@@ -55,6 +55,7 @@ const GestionUsuarios = () => {
           deleteFunction={eliminarUsuario}
           refrescarModelsFunction={obtenerUsuarios}
           tbody={["cedula", "nombre", "apellido", "nacimiento"]}
+          
         >
 
         </TablaGestionUsuario>

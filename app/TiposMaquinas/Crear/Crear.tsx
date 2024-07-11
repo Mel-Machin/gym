@@ -56,6 +56,7 @@ const Crear = () => {
                 createFunction={crear}
                 autoIncrement={true}
                 pikers={[]}
+                filesInput={[{clave:'srcFoto'}]}
             >
             </FormCrear>
         </View>);

@@ -60,6 +60,7 @@ const Gestion = () => {
           deleteFunction={eliminar}
           refrescarModelsFunction={obtenerTodos}
           tbody={["idRutina", "ciUsuario", "tiempo","repeticiones","dia","idEjercicio"]}
+          filesInput={[]}
         >
 
         </TablaGestion>
