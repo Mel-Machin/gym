@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+, "scripts/usuarioRepositorio.js", "scripts/usuarioRepositorio.jsx", "components/FormCrate.js", "app/Usuarios/_layout.js", "components/TablaGestion.js"  ]
 }
