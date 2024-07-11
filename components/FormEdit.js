@@ -114,9 +114,6 @@ const FormEdit = ({ modelData, editFunction, pikers,filesInput }) => {
         };
 
 
-        useEffect(()=>{
-            
-        },[model]);
 
 
     const getFile=(clave,valor)=>{

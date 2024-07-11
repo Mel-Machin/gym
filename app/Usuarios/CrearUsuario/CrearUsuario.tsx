@@ -24,7 +24,7 @@ const CrearUsuario = () => {
     };
 
     const crearUsuario = async  (usuario:Usuario)=>{
-        if(usuario !== null && usuario.nombre !== '' && usuario.apellido !== '' && isValidDate(usuario.nacimiento) && usuario.cedula != null){
+        if(usuario !== null && usuario.nombre !== '' && usuario.apellido !== '' && isValidDate(usuario.nacimiento) && usuario.cedula != null){ // veriffica los campos del usuario no sean vacios 
             let estado = await new UsuarioDao().crearUsuario(usuario);
             if(estado){
                 Alert.alert("Creado correctamente");
@@ -39,11 +39,11 @@ const CrearUsuario = () => {
     return (
         <View>
             <FormCrear
-                modelData={new Usuario(0,'','','')}
-                createFunction={crearUsuario}
-                autoIncrement={false}
-                pikers={[]}
-                filesInput={[]}
+                modelData={new Usuario(0,'','','')} // envia un modelo usuario al componente formulario crear 
+                createFunction={crearUsuario} // funcion a ejecutar en el fomrulario crear 
+                autoIncrement={false} // saber si tiene que incluir al primera propiedad o no 
+                pikers={[]} // es para saber si una propiedad es un select, manejar las claves foraneas 
+                filesInput={[]} // es para saber si una propiedad es una imagen, manejar imagenes 
                 >
             </FormCrear>
         </View>

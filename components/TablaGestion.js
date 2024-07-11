@@ -69,6 +69,8 @@ const TablaGestion = ({ models, linkEdit, deleteFunction, refrescarModelsFunctio
                         {getEntrada(clave,valor)}
                     </Col>
                 )}
+
+               {/*  botones editar y eliminar */}
                 <Col key={index} style={{borderColor:'rgb(180,180,180)', borderWidth:1,justifyContent:'center', alignItems:'center'}}>
                     <View style={{ flex:1,flexDirection:'row',alignItems:'center',gap:10}}>
 
