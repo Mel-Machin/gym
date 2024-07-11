@@ -95,12 +95,12 @@ const FormCrear = ({ modelData, createFunction, autoIncrement, pikers,filesInput
           quality: 1,
         });
     
-        console.log(result);
+        
     
         if (!result.cancelled) {
-            console.log("rgeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
-            console.log(result);
-            console.log("rgeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+            
+            
+            
            
           saveImage(result.assets[0].uri,clave);
           
@@ -112,20 +112,20 @@ const FormCrear = ({ modelData, createFunction, autoIncrement, pikers,filesInput
     //    const uniqueId = uuidv4();
     const id = uuid.v4();
 
-        let newUri = `${FileSystem.documentDirectory}${id}.jgp`;
+        let newUri = `${FileSystem.documentDirectory}$.jgp`;
       
         await FileSystem.copyAsync({
           from: imageUri,
           to: newUri,
           
         });
-        console.log("imagen copiadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        
         setModel({ ...model, [clave]: (newUri) });
         };
 
 
         useEffect(()=>{
-            console.log(model)
+            
         },[model]);
 
 
